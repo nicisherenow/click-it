@@ -1,4 +1,4 @@
-#Click-it!
+# Click-it!
 
 ## Welcome to Click-it!
 
