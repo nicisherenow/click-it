@@ -17,7 +17,6 @@ function App() {
   if (!loaded)return null
 
   return (
-    <Router>
       <Routes>
         <Route path={'/zen-mode'} exact={true}>
           <ZenMode />
@@ -30,7 +29,6 @@ function App() {
         </Route>
         <Route>Page not found.</Route>
       </Routes>
-    </Router>
   );
 }
 
