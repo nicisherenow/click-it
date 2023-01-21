@@ -40,7 +40,7 @@ function App() {
       setVal(1)
       alert(`You won with ${val} in ${time} seconds!!! Play again?!`)
     }
-  }, [val])
+  }, [val, time])
 
   const randval1 = () => {
     return Math.floor((Math.random() * val) * 2)
