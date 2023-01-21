@@ -34,6 +34,14 @@ function App() {
     rand4()
   }, [val])
 
+  useEffect(() => {
+    if (val > 10000) {
+      setTime(0)
+      setVal(1)
+      alert(`You won with ${val} in ${time} seconds!!! Play again?!`)
+    }
+  }, [val])
+
   const randval1 = () => {
     return Math.floor((Math.random() * val) * 2)
   }
@@ -53,16 +61,13 @@ function App() {
   let variable4 = randval4()
   let base = val
 
+
   const handleOnClick = (e) => {
     e.preventDefault()
     if (+e.target.value > val) {
       setTime(0)
       setVal(1)
       alert('You lost')
-    } else if (val > 10000) {
-      setTime(0)
-      setVal(1)
-      alert('You won!!! Play again?')
     } else {
       setVal(base += +e.target.value)
     }
