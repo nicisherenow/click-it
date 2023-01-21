@@ -83,19 +83,19 @@ function App() {
       </div>
       <button className="button-target-1"
            style={{position: "absolute", top: `${rand1()}vh`, left: `${rand1()}vw`}}
-           onMouseUp={handleOnClick}
+           onClick={handleOnClick}
            value={variable1}>{variable1}</button>
       <button className="button-target-1"
            style={{position: "absolute", top: `${rand2()}vh`, left: `${rand2()}vw`}}
-           onMouseUp={handleOnClick}
+           onClick={handleOnClick}
            value={variable2}>{variable2}</button>
       <button className="button-target-1"
            style={{position: "absolute", top: `${rand3()}vh`, left: `${rand3()}vw`}}
-           onMouseUp={handleOnClick}
+           onClick={handleOnClick}
            value={variable3}>{variable3}</button>
       <button className="button-target-1"
            style={{position: "absolute", top: `${rand4()}vh`, left: `${rand4()}vw`}}
-           onMouseUp={handleOnClick}
+           onClick={handleOnClick}
            value={variable4}>{variable4}</button>
     </div>
   );
