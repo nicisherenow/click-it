@@ -25,7 +25,7 @@ function App() {
     }, 2000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [time]);
 
   useEffect(() => {
     rand1()
