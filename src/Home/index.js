@@ -6,7 +6,7 @@ export default function Home () {
   return (
     <div className="home-container">
       <div className="general-overview">
-        Your number is represented in the center as the block dot with white text. You can tap on numbers that are less than or equal to your current number in order to increase your value.
+        Your number is represented in the center as the black dot with white text. You can tap on numbers that are less than or equal to your current number in order to increase your value.
         Have fun, for an additional challenge try speed mode. Or just enjoy yourself on the zen mode.
       </div>
       <div className="zen-mode-container">
