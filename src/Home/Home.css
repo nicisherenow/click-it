@@ -4,11 +4,14 @@ height: 100vh;
 width: 100vw;
 animation: bgcolor 20s infinite;
 animation-direction: alternate;
-justify-content: center;
 align-items: center;
 flex-direction: column;
-gap: 5vh;
+gap: 2vh;
+}
 
+.general-instructions {
+  display: flex;
+  margin-top: 5vh;
 }
 
 .zen-mode-container {
@@ -16,8 +19,9 @@ gap: 5vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 40%;
+  width: 60%;
   color: white;
+  text-align: center;
 }
 
 .zen-mode-button {
@@ -26,7 +30,7 @@ gap: 5vh;
   width: fit-content;
   padding: 10px;
   text-decoration: none;
-  animation: fcolor 20s infinite;
+  animation: fscolor 20s infinite;
   animation-direction: alternate;
   margin-bottom: 10px;
 }
@@ -36,8 +40,9 @@ gap: 5vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 40%;
+  width: 60%;
   color: white;
+  text-align: center;
 }
 
 .speed-mode-button {
@@ -46,7 +51,28 @@ gap: 5vh;
   width: fit-content;
   padding: 10px;
   text-decoration: none;
-  animation: fcolor 20s infinite;
+  animation: fscolor 20s infinite;
+  animation-direction: alternate;
+  margin-bottom: 10px;
+}
+
+.berserker-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  color: white;
+  text-align: center;
+}
+
+.berserker-button {
+  background-color: white;
+  border-radius: 1rem;
+  width: fit-content;
+  padding: 10px;
+  text-decoration: none;
+  animation: fscolor 20s infinite;
   animation-direction: alternate;
   margin-bottom: 10px;
 }
@@ -56,8 +82,24 @@ gap: 5vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 40%;
+  width: 60%;
   color: white;
+  text-align: center;
+}
+
+.created-by {
+  display: flex;
+  position: fixed;
+  right: 10vw;
+  bottom: 5vh;
+  flex-direction: column;
+  text-align: right;
+}
+
+.created-by>a {
+  text-decoration: none;
+  animation: fscolor 20s infinite;
+  animation-direction: alternate;
 }
 
 @keyframes bgcolor {
@@ -101,5 +143,27 @@ gap: 5vh;
 
   100% {
       color: #864cbf
+  }
+}
+
+@keyframes fscolor {
+  0% {
+      color: #d2a5ff
+  }
+
+  30% {
+      color: #73c5ff
+  }
+
+  60% {
+      color: rgb(255, 159, 175)
+  }
+
+  90% {
+      color: rgb(255, 202, 102)
+  }
+
+  100% {
+      color: rgb(234, 255, 159)
   }
 }

@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import '../index.css'
 
-export default function ZenMode() {
+export default function Berserker() {
+  const [time, setTime] = useState(0);
   let [val, setVal] = useState(1)
 
   const rand1 = () => {
@@ -17,6 +18,13 @@ export default function ZenMode() {
     return Math.floor((Math.random()* 85) + 5)
   }
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(time => time + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [time]);
 
   useEffect(() => {
     rand1()
@@ -24,6 +32,14 @@ export default function ZenMode() {
     rand3()
     rand4()
   }, [val])
+
+  useEffect(() => {
+    if (val > 10000) {
+      setTime(0)
+      setVal(1)
+      alert(`You won with ${val} in ${time} seconds!!! Play again?!`)
+    }
+  }, [val, time])
 
   const randval1 = () => {
     return Math.floor((Math.random() * val) * 2)
@@ -44,15 +60,13 @@ export default function ZenMode() {
   let variable4 = randval4()
   let base = val
 
-  const unStuck = () => {
-    setVal(base += 1)
-  }
 
   const handleOnClick = (e) => {
     e.preventDefault()
     if (+e.target.value > val) {
+      setTime(0)
       setVal(1)
-      alert('Oh no, you lost. Try again?')
+      alert('You lost')
     } else {
       setVal(base += +e.target.value)
     }
@@ -60,8 +74,11 @@ export default function ZenMode() {
 
   return (
     <div className="game-board">
+      <div className="timer-container">
+        <p className="timer">Time: {time} seconds</p>
+      </div>
       <div className="click-val-container">
-        <div className="click-val" onClick={unStuck}>{val}</div>
+        <div className="click-val">{val}</div>
       </div>
       <button className="button-target-1"
            style={{position: "absolute", top: `${rand1()}vh`, left: `${rand1()}vw`}}
