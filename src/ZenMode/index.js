@@ -44,6 +44,9 @@ export default function ZenMode() {
   let variable4 = randval4()
   let base = val
 
+  const unStuck = () => {
+    setVal(base += 1)
+  }
 
   const handleOnClick = (e) => {
     e.preventDefault()
@@ -58,7 +61,7 @@ export default function ZenMode() {
   return (
     <div className="game-board">
       <div className="click-val-container">
-        <div className="click-val">{val}</div>
+        <button className="click-val" onClick={unStuck}>{val}</button>
       </div>
       <button className="button-target-1"
            style={{position: "absolute", top: `${rand1()}vh`, left: `${rand1()}vw`}}

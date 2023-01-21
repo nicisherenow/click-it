@@ -1,4 +1,62 @@
+.home-container {
+display: flex;
+height: 100vh;
+width: 100vw;
+animation: bgcolor 20s infinite;
+animation-direction: alternate;
+justify-content: space-evenly;
+align-items: center;
+flex-direction: column;
+gap: 10px;
 
+}
+
+.zen-mode-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  color: white;
+}
+
+.zen-mode-button {
+  background-color: white;
+  border-radius: 1rem;
+  width: fit-content;
+  padding: 10px;
+  text-decoration: none;
+  animation: fcolor 20s infinite;
+  animation-direction: alternate;
+}
+
+.speed-mode-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  color: white;
+}
+
+.speed-mode-button {
+  background-color: white;
+  border-radius: 1rem;
+  width: fit-content;
+  padding: 10px;
+  text-decoration: none;
+  animation: fcolor 20s infinite;
+  animation-direction: alternate;
+}
+
+.general-overview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  color: white;
+}
 
 @keyframes bgcolor {
   0% {
@@ -19,5 +77,27 @@
 
   100% {
       background-color: #864cbf
+  }
+}
+
+@keyframes fcolor {
+  0% {
+      color: #45a3e5
+  }
+
+  30% {
+      color: #66bf39
+  }
+
+  60% {
+      color: #eb670f
+  }
+
+  90% {
+      color: #f35
+  }
+
+  100% {
+      color: #864cbf
   }
 }
