@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Router, Route, Routes } from "react-router";
+import { Route, Switch } from "react-router";
 import Home from "./Home";
 import SpeedMode from "./SpeedMode";
 import ZenMode from "./ZenMode";
@@ -17,7 +17,7 @@ function App() {
   if (!loaded)return null
 
   return (
-      <Routes>
+      <Switch>
         <Route path={'/zen-mode'} exact={true}>
           <ZenMode />
         </Route>
@@ -28,7 +28,7 @@ function App() {
           <Home />
         </Route>
         <Route>Page not found.</Route>
-      </Routes>
+      </Switch>
   );
 }
 
