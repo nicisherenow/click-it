@@ -1,13 +1,19 @@
 /* TODO Add site wide styles */
 body {
   margin: 0;
+  height: 100vh;
+  width: 100vw;
 }
 .game-board {
   display: flex;
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
   animation: bgcolor 20s infinite;
   animation-direction: alternate;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
 }
 
 @keyframes bgcolor {
@@ -37,7 +43,6 @@ body {
   background-color: black;
   font-weight: bold;
   display: flex;
-  position: absolute;
   justify-content: center;
   align-items: center;
   top: 50vh;
@@ -61,6 +66,19 @@ body {
 }
 
 .timer {
+  color: white;
+  font-weight: bold;
+}
+
+.timer-container {
+  display: flex;
   position: absolute;
-  left: 42vh;
+  top: 0;
+  margin: auto;
+}
+
+.click-val-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -75,8 +75,12 @@ function App() {
 
   return (
     <div className="game-board">
-      <p className="timer">Time: {time} seconds</p>
-      <div className="click-val">{val}</div>
+      <div className="timer-container">
+        <p className="timer">Time: {time} seconds</p>
+      </div>
+      <div className="click-val-container">
+        <div className="click-val">{val}</div>
+      </div>
       <button className="button-target-1"
            style={{position: "absolute", top: `${rand1()}vh`, left: `${rand1()}vw`}}
            onMouseUp={handleOnClick}
